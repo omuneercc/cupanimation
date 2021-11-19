@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<div class="float-right coffee-anim d-none d-sm-block">
+    <div class="steam" id="steam-one"></div>
+    <div class="steam" id="steam-two"></div>
+    <div class="steam" id="steam-three"></div>
+    <div class="steam" id="steam-four"></div>
+    <img data-src="/coffeecup.png" alt="coffee" class="img-fluid lazyload mb-3 loaded" src="../cup-animation/coffeecup.png" data-was-processed="true">
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<style>
+body {
+    background: #6c6c6c;
+}
+ 
+.coffee-anim img {
+    width: 15rem;
+}
+.coffee-anim .steam {
+    position: absolute;
+    margin-top: -0.5rem;
+    margin-left: 2.5rem;
+    z-index: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 86.60254px solid #fff;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.coffee-anim #steam-one {
+    -webkit-animation: steam-one 4s ease-out infinite;
+    animation: steam-one 4s ease-out infinite;
+}
+.coffee-anim #steam-three {
+    -webkit-animation: steam-one 4s ease-out 1s infinite;
+    animation: steam-one 4s ease-out 1s infinite;
+}
+@-webkit-keyframes steam-one {
+    0% {
+        -webkit-transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: rotate(90deg) translateY(-200px) translateX(-50px) scale(1);
+        transform: rotate(90deg) translateY(-200px) translateX(-50px) scale(1);
+        opacity: 0;
+    }
+}
+@keyframes steam-one {
+    0% {
+        -webkit-transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: rotate(90deg) translateY(-200px) translateX(-50px) scale(1);
+        transform: rotate(90deg) translateY(-200px) translateX(-50px) scale(1);
+        opacity: 0;
+    }
+}
+.coffee-anim #steam-two {
+    -webkit-animation: steam-two 4s ease-out 0.5s infinite;
+    animation: steam-two 4s ease-out 0.5s infinite;
+}
+.coffee-anim #steam-four {
+    -webkit-animation: steam-two 4s ease-out 1.5s infinite;
+    animation: steam-two 4s ease-out 1.5s infinite;
+}
+@-webkit-keyframes steam-two {
+    0% {
+        -webkit-transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: rotate(90deg) translateY(-200px) translateX(-10px) scale(1);
+        transform: rotate(90deg) translateY(-200px) translateX(-10px) scale(1);
+        opacity: 0;
+    }
+}
+@keyframes steam-two {
+    0% {
+        -webkit-transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        transform: rotate(90deg) translateY(0) translateX(0) scale(0.25);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: rotate(90deg) translateY(-200px) translateX(-10px) scale(1);
+        transform: rotate(90deg) translateY(-200px) translateX(-10px) scale(1);
+        opacity: 0;
+    }
+}
+
+</style>
+</body>
+</html>
